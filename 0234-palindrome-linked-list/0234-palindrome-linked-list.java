@@ -14,19 +14,19 @@ class Solution {
          Stack<Integer> stack = new Stack<>();
 
         
-        ListNode curr = head;
-        while (curr != null) {
-            stack.push(curr.val);
-            curr = curr.next;
+        ListNode node = head;
+        while (node != null) {
+            stack.push(node.val);
+            node = node.next;
         }
 
-        curr = head;
-        while (curr != null) { 
+        node = head;
+        while (node != null) { 
 
-            if (curr.val != stack.pop()) {
+            if (node.val != stack.pop()) {
                 return false;
             }
-            curr = curr.next;
+            node = node.next;
         }
 
      return true;
